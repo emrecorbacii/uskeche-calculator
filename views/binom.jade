@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  if title == 0
+  form(action="/binom", method="post")
+          div.input
+              span.label Deneme Sayısı(n) = 
+              input(type="text", name="n")
+              <br></br>
+              span.label Başarı Sayısı(r) = 
+              input(type="text", name="r")
+              <br></br>
+              span.label Bir Denemedeki Başarı Olasılığı(p) = 
+              input(type="text", name="p")
+          div.actions
+              input(type="submit", value="calc")
+  if title !=0
+  #{title}

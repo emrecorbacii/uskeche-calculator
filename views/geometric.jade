@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  if title == 0
+  form(action="/geometric", method="post")
+          div.input
+              span.label Deneme Sayısı(y) = 
+              input(type="text", name="y")
+              <br></br>
+              span.label Başarı Olasılığı(p) = 
+              input(type="text", name="p")
+          div.actions
+              input(type="submit", value="calc")
+  if title !=0
+  #{title}

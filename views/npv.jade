@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  if title == 0
+  form(action="/npv", method="post")
+          div.input
+              span.label Faiz Oranı (rate) = 
+              input(type="text", name="rate")
+              <br></br>
+              span.label Son Satış fiyatı (lastPrice) = 
+              input(type="text", name="lastPrice")
+              <br></br>
+              span.label Yıllık Akış Sayısı (annualFlowSize) = 
+              input(type="text", name="flowSize")
+              <br></br>
+              span.label Akış Fiyatı Aylık (monthlyFlowPrice) = 
+              input(type="text", name="flowPrice")
+          div.actions
+              input(type="submit", value="calc")
+  if title !=0
+  #{title}
